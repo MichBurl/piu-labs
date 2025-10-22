@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Konkurs</title>
+  <link rel="stylesheet" href="css/konkurs.css">
+</head>
+<body>
+  <main class="card" role="main">
+    <div class="heading">
+    <h1>Zgłoszenie do Konkursu Plastycznego</h1>
+  <label class="moon-switch"><input type="checkbox" id="theme-toggle">🌓
+  </label>
+    </div>
+    <form action="https://httpbin.org/get" method="get">
+      <!-- Imię -->
+      <div>
+        <label for="fname">Imię:</label>
+        <input id="fname" name="fname" type="text" maxlength="30" required>
+      </div>
+
+      <!-- Nazwisko -->
+      <div>
+        <label for="lname">Nazwisko:</label>
+        <input id="lname" name="lname" type="text" maxlength="50" required>
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label for="email">Email:</label>
+        <input id="email" name="email" type="email" required>
+      </div>
+
+      <!-- Miasto -->
+      <div>
+        <label for="city">Miasto:</label>
+        <input id="city" name="city" list="city-list" placeholder="Wpisz lub wybierz" required>
+        <datalist id="city-list">
+          <option value="Warszawa"></option>
+          <option value="Kraków"></option>
+          <option value="Gdańsk"></option>
+          <option value="Wrocław"></option>
+          <option value="Poznań"></option>
+        </datalist>
+      </div>
+
+      <div class="row">
+        <!-- Data urodzenia -->
+        <div>
+          <label for="bday">Data urodzenia:</label>
+          <input id="bday" name="bday" type="date" required>
+        </div>
+
+        <!-- Liczba prac -->
+        <div>
+          <label for="jobs">Liczba zgłaszanych prac (od 1 do 6):</label>
+          <input id="jobs" name="jobs" type="number" min="1" max="6" step="1" required>
+        </div>
+      </div>
+
+      <!-- Kolor -->
+      <div>
+        <label for="favcolor">Kolor wiodący prac:</label>
+        <input id="favcolor" name="favcolor" type="color" value="#4CAF50" required aria-label="Wybór koloru">
+      </div>
+
+      <!-- Kategoria -->
+      <div>
+        <label for="category">Kategoria:</label>
+        <select id="category" name="category" required>
+          <option value="" disabled selected>-- wybierz kategorię --</option>
+          <option value="A">Rysunek</option>
+          <option value="B">Malarstwo</option>
+          <option value="C">Grafika Cyfrowa</option>
+        </select>
+      </div>
+
+      <!-- Publikacja -->
+        <fieldset>
+        <legend>Publikacja pracy online:</legend>
+        <label class="inline">
+            <input type="radio" name="publikacja" value="tak" required> Tak
+        </label>
+        <label class="inline">
+            <input type="radio" name="publikacja" value="nie"> Nie
+        </label>
+        </fieldset>
+
+      <!-- Zgoda -->
+        <label class="inline">
+        <input class="check" type="checkbox" name="zgoda" required> Zgadzam się na regulamin konkursu
+        </label>
+
+      <!-- Przycisk -->
+      <button type="submit">Wyślij zgłoszenie</button>
+    </form>
+  </main>
+</body>
+</html>

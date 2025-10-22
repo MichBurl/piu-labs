@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uwagi o formularzach HTML</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <!-- Header strony -->
+  <header>
+    <h1>Moje przemyślenia o formularzach HTML</h1>
+  </header>
+
+  <main>
+    <!-- Sekcja: dlaczego formularze są przydatne -->
+    <section>
+      <h2>Po co w ogóle formularze?</h2>
+      <p>Formularze to taki sposób, żeby strona mogła rozmawiać z użytkownikiem i zebrać od niego dane.</p>
+      <ul>
+        <li>możliwość zebrania imienia, nazwiska, maila</li>
+        <li>przyjmowanie wielu zgłoszeń w ustrukturyzowany sposób</li>
+        <li>tworzenie ankiet lub rejestracji na wydarzenia</li>
+      </ul>
+      <p>Dzięki formularzom można łatwo sprawdzić, czy dane są poprawne (HTML5 walidacja) i przesłać je na serwer.</p>
+    </section>
+
+    <!-- Sekcja: kiedy warto stosować formularze -->
+    <section>
+      <h2>Kiedy warto je stosować?</h2>
+      <p>Według mnie formularze najlepiej stosować, gdy naprawdę potrzebujemy danych od użytkownika. Np.:</p>
+      <ul>
+        <li>rejestracja lub logowanie do strony</li>
+        <li>kontakt poprzez stronę (formularz kontaktowy)</li>
+        <li>zebranie opinii, zgłoszeń lub odpowiedzi w ankiecie</li>
+      </ul>
+      <!-- komentarz do projektu konkurs.html: tutaj w praktyce używałem inputów text, date, select -->
+    </section>
+
+    <!-- Sekcja: kiedy nie warto -->
+    <section>
+      <h2>Kiedy nie warto</h2>
+      <p>Nie zawsze formularz jest potrzebny. Moim zdaniem nie warto go robić, gdy:</p>
+      <ul>
+        <li>strona ma tylko wyświetlać informacje, bez interakcji</li>
+        <li>wystarczy zwykły link lub przycisk do dalszej akcji</li>
+        <li>zbieranie danych byłoby zbędnie skomplikowane</li>
+      </ul>
+      <!-- komentarz: unikałem wtedy checkboxów i radio w projekcie, bo były niepotrzebne -->
+    </section>
+
+    <!-- Sekcja: moje uwagi -->
+    <section>
+      <h2>Moje uwagi z praktyki</h2>
+      <p>Podczas pracy nad formularzem konkursowym nauczyłem się kilku rzeczy, które warto pamiętać:</p>
+      <ul>
+        <li>Zawsze używać semantycznych elementów: <code>&lt;form&gt;</code>, <code>&lt;label&gt;</code>, <code>&lt;fieldset&gt;</code>, <code>&lt;legend&gt;</code> – ułatwia to życie i osobom korzystającym z czytników ekranu.</li>
+        <li>Oznaczać pola obowiązkowe i dbać o walidację w HTML (np. type="email", required).</li>
+        <li>Pamiętać o przycisku submit i stylu przyjaznym dla użytkownika (jak w konkurs.html przy buttonie wysyłającym zgłoszenie).</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>moje przemyślenia o formularzach HTML.</p>
+  </footer>
+</body>
+</html>

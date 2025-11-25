@@ -8,9 +8,18 @@ body {
   margin: 1rem;
   padding: 0;
 }
-
+h1 {
+  text-align: center;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  background-color: #0066cc;
+}
 a {
-  color: #0066cc; /* niebieski kolor linków */
+  color: white; /* niebieski kolor linków */
   text-decoration: none; /* bez podkreślenia */
   font-size: 1.4rem;
 }

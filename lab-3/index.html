@@ -1,12 +1,63 @@
 <!DOCTYPE html>
 <html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Lab 3</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zmiana zdjęcia kolorem</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
   <body>
-    <h1>Lab 3</h1>
-    <a href="..">Powrót</a>
+
+    <!-- radio inputs dla kolorów -->
+    <input type="radio" name="color" id="green" checked>
+    <input type="radio" name="color" id="yellow">
+    <input type="radio" name="color" id="blue">
+    <input type="radio" name="color" id="red">
+
+    <!-- obrazy -->
+    <div class="images">
+      <img src="polo/polo_g.png" class="img-green" alt="Zielona wersja zdjęcia">
+      <img src="polo/polo_y.png" class="img-yellow" alt="Żółta wersja zdjęcia">
+      <img src="polo/polo_b.png" class="img-blue" alt="Niebieska wersja zdjęcia">
+      <img src="polo/polo_r.png" class="img-red" alt="Czerwona wersja zdjęcia">
+    </div>
+    <div class="tresc">
+    <h2>Koszulka Polo</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero perspiciatis odit fugit odio vitae provident iusto ut pariatur iste, magni in adipisci ducimus suscipit.</p>
+
+    <!-- widoczne kontrolki kolorów -->
+     <div class="center">
+     <h2>Wybierz kolor</h2>
+    <div class="color-picker">
+      <label for="green" class="swatch" title="Zielony"></label>
+      <label for="yellow" class="swatch" title="Żółty"></label>
+      <label for="blue" class="swatch" title="Niebieski"></label>
+      <label for="red" class="swatch" title="Czerwony"></label>
+    </div>
+
+    
+
+    <!-- radio inputs dla rozmiarów -->
+     
+    <input type="radio" name="size" id="size-s" checked>
+    <input type="radio" name="size" id="size-m">
+    <input type="radio" name="size" id="size-l">
+    <input type="radio" name="size" id="size-xl">
+
+    <h2>Wybierz rozmiar</h2>
+    <div class="size-picker">
+      <label for="size-s" class="size-btn">S</label>
+      <label for="size-m" class="size-btn">M</label>
+      <label for="size-l" class="size-btn">L</label>
+      <label for="size-xl" class="size-btn">XL</label>
+    </div>
+
+    <p>59,99 zł</p>
+
+    <div class="buy">
+      <button>Do koszyka</button>
+    </div>
+    </div>
+    </div>
   </body>
 </html>

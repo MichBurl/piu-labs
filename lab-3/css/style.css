@@ -1,19 +1,127 @@
 /* Minimalny reset  */
 html {
-  font-size: 16px; /* bazowy rozmiar czcionki */
-  font-family: system-ui, sans-serif; /* font systemowy */
-  line-height: 1.5; /* lepsza czytelność */
-}
-body {
-  margin: 1rem;
-  padding: 0;
+  font-size: 16px;
+  font-family: system-ui, sans-serif; 
+  line-height: 1.5; 
 }
 
-a {
-  color: #0066cc; /* niebieski kolor linków */
-  text-decoration: none; /* bez podkreślenia */
-  font-size: 1.4rem;
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
 }
-a:hover {
-  text-decoration: underline; /* podkreślenie przy najechaniu */
+
+/* ---------- UKRYWANIE RADIO ---------- */
+input[type="radio"] {
+  display: none !important;
 }
+
+/* ---------- PICKER KOLORÓW ---------- */
+.color-picker {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.swatch {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #333;
+}
+
+
+label[for="green"]  { background: green; }
+label[for="yellow"] { background: yellow; }
+label[for="blue"]   { background: blue; }
+label[for="red"]    { background: red; }
+
+/* ---------- ZDJĘCIA ---------- */
+.images {
+  max-width: 50%;
+}
+.tresc {
+  padding: 0;
+  margin: 0 0 0 20px;
+  width: 300px;
+}
+.center {
+  text-align: center;
+}
+h2 {
+    padding: 0;
+  margin: 0;
+}
+
+.images img {
+  display: none;
+  width: 500px;
+  max-width: 100%;
+}
+
+#green:checked  ~ .images .img-green  { display: block; border-style: solid; border-radius: 25px; border-color: rgba(0, 128, 0, 0.3); }
+#yellow:checked ~ .images .img-yellow { display: block; border-style: solid; border-radius: 25px; border-color: rgba(255, 255, 0, 0.3);}
+#blue:checked   ~ .images .img-blue   { display: block; border-style: solid; border-radius: 25px; border-color: rgba(0, 0, 255, 0.3);}
+#red:checked    ~ .images .img-red    { display: block; border-style: solid; border-radius: 25px; border-color: rgba(255, 0, 0, 0.3);}
+
+/* ---------- PICKER ROZMIARÓW ---------- */
+.size-picker {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+  justify-content: center;
+  align-items: center;
+}
+.color-picker {
+  justify-content: center;
+  align-items: center;
+}
+
+.size-btn {
+  padding: 10px 18px;
+  border-radius: 6px;
+  border: 2px solid #333;
+  cursor: pointer;
+  font-weight: bold;
+  background: #eee;
+  transition: 0.2s;
+}
+button {
+  font-size: 24px;
+  padding: 10px 20px;
+  border: solid 1px;
+  border-radius: 5px;
+}
+button:hover {
+  border: solid 2px;
+  transform: scale(1.1);
+}
+
+/* ---------- KOLORY ROZMIARÓW (ZMIENIAJĄ SIĘ) ---------- */
+#green:checked  ~ .tresc .size-picker label { background: rgba(0, 128, 0, 0.3); }
+#yellow:checked ~ .tresc .size-picker label { background: rgba(255, 255, 0, 0.3); }
+#blue:checked   ~ .tresc .size-picker label { background: rgba(0, 0, 255, 0.3); }
+#red:checked    ~ .tresc .size-picker label { background: rgba(255, 0, 0, 0.3); }
+
+#green:checked  ~  .tresc .buy button { background: rgba(0, 128, 0, 0.3); }
+#yellow:checked ~  .tresc .buy button { background: rgba(255, 255, 0, 0.3); }
+#blue:checked   ~  .tresc .buy button { background: rgba(0, 0, 255, 0.3); }
+#red:checked    ~  .tresc .buy button { background: rgba(255, 0, 0, 0.3); }
+
+/* wyróżnienie wybranego rozmiaru */
+#size-s:checked ~ .size-picker label[for="size-s"],
+#size-m:checked ~ .size-picker label[for="size-m"],
+#size-l:checked ~ .size-picker label[for="size-l"],
+#size-xl:checked ~ .size-picker label[for="size-xl"] {
+  border-color: black;
+  transform: scale(1.1);
+}
+
+
+
+

@@ -1,4 +1,6 @@
-/* Minimalny reset  */
+/* ========================================
+   RESET & BASE STYLES
+======================================== */
 html {
   font-size: 16px;
   font-family: system-ui, sans-serif; 
@@ -15,16 +17,88 @@ body {
   gap: 20px;
 }
 
-/* ---------- UKRYWANIE RADIO ---------- */
+h2 {
+  padding: 0;
+  margin: 0;
+}
+
+/* ========================================
+   RADIO INPUTS
+======================================== */
 input[type="radio"] {
   display: none !important;
 }
 
-/* ---------- PICKER KOLORÓW ---------- */
+/* ========================================
+   LAYOUT CONTAINERS
+======================================== */
+.images {
+  max-width: 50%;
+}
+
+.tresc {
+  padding: 0;
+  margin: 0 0 0 20px;
+  width: 300px;
+}
+
+.center {
+  text-align: center;
+}
+
+/* ========================================
+   IMAGES
+======================================== */
+.images img {
+  display: none;
+  width: 500px;
+  max-width: 100%;
+  animation: float 4s ease-in-out infinite;
+  transition: transform 0.35s ease;
+}
+
+.images img:hover {
+  transform: scale(1.08) rotate(1deg);
+}
+
+/* Image display based on color selection */
+#green:checked ~ .images .img-green {
+  display: block;
+  border-style: solid;
+  border-radius: 25px;
+  border-color: rgba(0, 128, 0, 0.3);
+}
+
+#yellow:checked ~ .images .img-yellow {
+  display: block;
+  border-style: solid;
+  border-radius: 25px;
+  border-color: rgba(255, 255, 0, 0.3);
+}
+
+#blue:checked ~ .images .img-blue {
+  display: block;
+  border-style: solid;
+  border-radius: 25px;
+  border-color: rgba(0, 0, 255, 0.3);
+}
+
+#red:checked ~ .images .img-red {
+  display: block;
+  border-style: solid;
+  border-radius: 25px;
+  border-color: rgba(255, 0, 0, 0.3);
+}
+
+/* ========================================
+   COLOR PICKER
+======================================== */
 .color-picker {
   display: flex;
   gap: 15px;
   margin: 20px 0;
+  justify-content: center;
+  align-items: center;
 }
 
 .swatch {
@@ -35,49 +109,30 @@ input[type="radio"] {
   border: 2px solid #333;
 }
 
-
-label[for="green"]  { background: green; }
-label[for="yellow"] { background: yellow; }
-label[for="blue"]   { background: blue; }
-label[for="red"]    { background: red; }
-
-/* ---------- ZDJĘCIA ---------- */
-.images {
-  max-width: 50%;
-}
-.tresc {
-  padding: 0;
-  margin: 0 0 0 20px;
-  width: 300px;
-}
-.center {
-  text-align: center;
-}
-h2 {
-    padding: 0;
-  margin: 0;
+/* Swatch colors */
+label[for="green"] {
+  background: green;
 }
 
-.images img {
-  display: none;
-  width: 500px;
-  max-width: 100%;
+label[for="yellow"] {
+  background: yellow;
 }
 
-#green:checked  ~ .images .img-green  { display: block; border-style: solid; border-radius: 25px; border-color: rgba(0, 128, 0, 0.3); }
-#yellow:checked ~ .images .img-yellow { display: block; border-style: solid; border-radius: 25px; border-color: rgba(255, 255, 0, 0.3);}
-#blue:checked   ~ .images .img-blue   { display: block; border-style: solid; border-radius: 25px; border-color: rgba(0, 0, 255, 0.3);}
-#red:checked    ~ .images .img-red    { display: block; border-style: solid; border-radius: 25px; border-color: rgba(255, 0, 0, 0.3);}
+label[for="blue"] {
+  background: blue;
+}
 
-/* ---------- PICKER ROZMIARÓW ---------- */
+label[for="red"] {
+  background: red;
+}
+
+/* ========================================
+   SIZE PICKER
+======================================== */
 .size-picker {
   display: flex;
   gap: 10px;
   margin: 20px 0;
-  justify-content: center;
-  align-items: center;
-}
-.color-picker {
   justify-content: center;
   align-items: center;
 }
@@ -91,29 +146,14 @@ h2 {
   background: #eee;
   transition: 0.2s;
 }
-button {
-  font-size: 24px;
-  padding: 10px 20px;
-  border: solid 1px;
-  border-radius: 5px;
-}
-button:hover {
-  border: solid 2px;
-  transform: scale(1.1);
+
+.size-picker label:hover, .color-picker label:hover {
+  transform: translateY(-3px) scale(1.05);
+  
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* ---------- KOLORY ROZMIARÓW (ZMIENIAJĄ SIĘ) ---------- */
-#green:checked  ~ .tresc .size-picker label { background: rgba(0, 128, 0, 0.3); }
-#yellow:checked ~ .tresc .size-picker label { background: rgba(255, 255, 0, 0.3); }
-#blue:checked   ~ .tresc .size-picker label { background: rgba(0, 0, 255, 0.3); }
-#red:checked    ~ .tresc .size-picker label { background: rgba(255, 0, 0, 0.3); }
-
-#green:checked  ~  .tresc .buy button { background: rgba(0, 128, 0, 0.3); }
-#yellow:checked ~  .tresc .buy button { background: rgba(255, 255, 0, 0.3); }
-#blue:checked   ~  .tresc .buy button { background: rgba(0, 0, 255, 0.3); }
-#red:checked    ~  .tresc .buy button { background: rgba(255, 0, 0, 0.3); }
-
-/* wyróżnienie wybranego rozmiaru */
+/* Size selection highlight */
 #size-s:checked ~ .size-picker label[for="size-s"],
 #size-m:checked ~ .size-picker label[for="size-m"],
 #size-l:checked ~ .size-picker label[for="size-l"],
@@ -122,6 +162,52 @@ button:hover {
   transform: scale(1.1);
 }
 
+/* ========================================
+   DYNAMIC COLOR CHANGES
+======================================== */
+/* Size picker colors based on selected color */
+#green:checked ~ .tresc .size-picker label {
+  background: rgba(0, 128, 0, 0.3);
+}
 
+#yellow:checked ~ .tresc .size-picker label {
+  background: rgba(255, 255, 0, 0.3);
+}
 
+#blue:checked ~ .tresc .size-picker label {
+  background: rgba(0, 0, 255, 0.3);
+}
 
+#red:checked ~ .tresc .size-picker label {
+  background: rgba(255, 0, 0, 0.3);
+}
+
+/* Button colors based on selected color */
+#green:checked ~ .tresc .buy button {
+  background: rgba(0, 128, 0, 0.3);
+}
+
+#yellow:checked ~ .tresc .buy button {
+  background: rgba(255, 255, 0, 0.3);
+}
+
+#blue:checked ~ .tresc .buy button {
+  background: rgba(0, 0, 255, 0.3);
+}
+
+#red:checked ~ .tresc .buy button {
+  background: rgba(255, 0, 0, 0.3);
+}
+
+/* BUTTONS */
+button {
+  font-size: 24px;
+  padding: 10px 20px;
+  border: solid 1px;
+  border-radius: 5px;
+}
+
+button:hover {
+  border: solid 2px;
+  transform: scale(1.1);
+}

@@ -8,5 +8,48 @@
   <body>
     <h1>Lab 4</h1>
     <a href="..">Powrót</a>
-  </body>
+
+    <div class="board-container">
+        <div class="column" id="todo" data-id="todo">
+            <div class="column-header">
+                <h2>Do zrobienia (<span class="counter">0</span>)</h2>
+                <div class="column-actions">
+                    <button class="btn-action" data-action="add">+ Dodaj</button>
+                    <button class="btn-action" data-action="color-col">Koloruj</button>
+                    <button class="btn-action" data-action="sort">Sortuj</button>
+                </div>
+            </div>
+            <div class="cards-list">
+                </div>
+        </div>
+
+        <div class="column" id="inprogress" data-id="inprogress">
+            <div class="column-header">
+                <h2>W trakcie (<span class="counter">0</span>)</h2>
+                <div class="column-actions">
+                    <button class="btn-action" data-action="add">+ Dodaj</button>
+                    <button class="btn-action" data-action="color-col">Koloruj</button>
+                    <button class="btn-action" data-action="sort">Sortuj</button>
+                </div>
+            </div>
+            <div class="cards-list">
+                </div>
+        </div>
+
+        <div class="column" id="done" data-id="done">
+            <div class="column-header">
+                <h2>Zrobione (<span class="counter">0</span>)</h2>
+                <div class="column-actions">
+                    <button class="btn-action" data-action="add">+ Dodaj</button>
+                    <button class="btn-action" data-action="color-col">Koloruj</button>
+                    <button class="btn-action" data-action="sort">Sortuj</button>
+                </div>
+            </div>
+            <div class="cards-list">
+                </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>

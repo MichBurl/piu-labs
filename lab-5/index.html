@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 5: Kształty</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Generator Kształtów</h1>
+        <p>Wzorzec Obserwator + Moduły ES6</p>
+    </header>
+
+    <div class="controls">
+        <div class="control-group">
+            <h3>Kółka (<span id="count-circles">0</span>)</h3>
+            <button id="add-circle" class="btn">+ Dodaj</button>
+            <button id="color-circles" class="btn btn-outline">Koloruj</button>
+        </div>
+        <div class="control-group">
+            <h3>Kwadraty (<span id="count-squares">0</span>)</h3>
+            <button id="add-square" class="btn">+ Dodaj</button>
+            <button id="color-squares" class="btn btn-outline">Koloruj</button>
+        </div>
+    </div>
+
+    <div id="shapes-container" class="shapes-grid">
+        </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
